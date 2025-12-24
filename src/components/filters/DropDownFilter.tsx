@@ -9,8 +9,7 @@ interface DropDownFilterProps {
   genre: string;
 }
 
-const DropDownFilter: React.FC<DropDownFilterProps> = ({ onClick, isOpen, filterByGenre, genre }) => {
-  const categories: Category[] = [
+export const categories: Category[] = [
     { id: 'All', name: 'All Categories' },
     { id: "men's clothing", name: "Men's Clothing" },
     { id: "women's clothing", name: "Women's Clothing" },
@@ -18,6 +17,8 @@ const DropDownFilter: React.FC<DropDownFilterProps> = ({ onClick, isOpen, filter
     { id: 'jewelery', name: 'Jewelery' },
   ];
 
+const DropDownFilter: React.FC<DropDownFilterProps> = ({ onClick, isOpen, filterByGenre, genre }) => {
+  
   return (
     <div className={`dropdown-wrapper ${isOpen ? 'open' : ''}`}>
       <div
